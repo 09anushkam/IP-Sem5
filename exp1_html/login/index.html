@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 20px;
+}
+
+.form-element{
+    margin: 24px;
+}
+
+.btn-submit{
+    padding: 10px 20px;
+    align-self: center;
+    justify-self: center;
+}
+    </style>
+    <title>Blog website / Login</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form" id="form">
+            <h1>Login</h1>
+            <form action="" method="post">
+                <div class="form-element email" id="email">
+                    <label for="name">Email :</label>
+                    <input name="email" type="text" placeholder="Email">
+                </div>
+                <div class="form-element password" id="password">
+                    <label for="name">Password :</label>
+                    <input name="password" type="password" placeholder="Password">
+                </div>
+                <div class="form-element btn" id="btn">
+                    <button class="btn-submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
