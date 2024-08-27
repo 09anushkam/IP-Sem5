@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     }
+
     body,html {
     width: 100vw;
     height: 100vh;
@@ -11,13 +12,14 @@
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f9;
-    
     overflow: hidden;
     }
+
     .container {
     width: 100%;
     overflow: hidden;
     }
+
     /* Navigation Bar Styles */
     .nav {
     display: flex;
@@ -28,33 +30,38 @@
     padding: 15px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
     .logo h3 {
     margin-left: 20px;
     font-size: 1.8em;
     font-weight: bold;
     align-self: flex-start;
     }
+
     .nav-links {
     display: flex;
     align-items: center;
     justify-content: space-around;
     }
+
     .nav-link {
     margin: 0 20px;
     }
+
     .nav-link a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    
     padding: 8px 15px;
     border-radius: 5px;
     transition: background 0.3s ease, color 0.3s ease;
     }
+
     .nav-link a:hover {
     background: rgba(255, 255, 255, 0.2);
     color: #f4f4f4;
     }
+
     /* Hero Section Styles */
     .hero {
     display: flex;
@@ -65,24 +72,28 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     }
+
     .left {
     width: 50%;
     padding: 30px;
     }
+
     .hero-content {
     margin-bottom: 20px;
     }
+    
     .hero-content h1 {
     font-size: 3em;
     margin-bottom: 15px;
     color: #1e3c72;
     }
+
     .hero-content p {
     font-size: 1.2em;
     color: #555;
     line-height: 1.6;
-    
     }
+
     .btn {
     padding: 16px 30px;
     background-color: #2a5298;
@@ -94,16 +105,19 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
     text-transform: uppercase;
     }
+
     .btn:hover {
     background-color: #1e3c72;
     transform: scale(1.05);
     }
+
     .right {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     }
+
     .right img {
     max-width: 100%;
     height: auto;
