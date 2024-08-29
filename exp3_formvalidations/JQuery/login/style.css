@@ -1,0 +1,139 @@
+/* Reset some default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   
+   /* General Body Styles */
+   
+   body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #a2c2e8, #f5f7fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   }
+   
+   
+   /* Container Styles */
+   
+   .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+   }
+   
+   
+   /* Form Styles */
+   
+   .form {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+   }
+   
+   
+   /* Heading Styles */
+   
+   .form h1 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    color: #1e3c72;
+    /* Match landing page primary color */
+    font-weight: bold;
+   }
+   
+   
+   /* Form Element Styles */
+   
+   .form-element {
+    margin-bottom: 24px;
+    text-align: left;
+   }
+   
+   .form-element label {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+   }
+   
+   .form-element input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+   }
+   
+   .form-element input:focus {
+    border-color: #0056b3;
+    /* Match landing page button color */
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.2);
+   }
+   
+   
+   /* Button Styles */
+   
+   .btn-submit {
+    background-color: #0056b3;
+    /* Match landing page button color */
+    color: #fff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+   }
+   
+   .btn-submit:hover {
+    background-color: #003d7a;
+    /* Darker shade for hover effect */
+    transform: scale(1.05);
+   }
+   
+   .btn-submit:active {
+    background-color: #003d7a;
+    /* Consistent with hover color */
+    transform: scale(1.02);
+   }
+   
+   
+   /* Animation for form */
+   
+   @keyframes fadeIn {
+    from {
+    opacity: 0;
+    transform: translateY(-20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+   }
+   
+   
+   /* CSS to style the error messages */
+   
+   .error-message {
+    color: red !important;
+    ;
+    font-size: 0.875em;
+    /* Adjust size as needed */
+    margin-top: 5px;
+   }

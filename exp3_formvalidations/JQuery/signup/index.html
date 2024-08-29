@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- below we are including the jQuery
+         and jQuery plugin .js files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js">
+    </script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Blog website / Signup</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form" id="form">
+            <h1>Register</h1>
+            <form id="signupForm" action="/signup.php" method="post">
+                <div class="form-element name" id="namediv">
+                    <label for="name">Name :</label>
+                    <input name="name" id="name" type="text" placeholder="Name">
+                </div>
+                <div class="form-element email" id="emaildiv">
+                    <label for="email">Email :</label>
+                    <input name="email" id="email" type="text" placeholder="Email">
+                </div>
+                <div class="form-element password" id="passworddiv">
+                    <label for="password">Password :</label>
+                    <input name="password" id="password" type="password" placeholder="Password">
+                </div>
+                <div class="form-element confirmpassword" id="confirmpassworddiv">
+                    <label for="confirmpassword">Confirm Password :</label>
+                    <input name="confirmpassword" id="password" type="password" placeholder="Confirm Password">
+                </div>
+                <div class="form-element btn" id="btn">
+                    <button class="btn-submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#signupForm").validate({
+                // Define validation rules
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 2 // Minimum length for name
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5,
+                        // Add regex for password validation (e.g., at least one letter, one number, and one special character)
+                        pattern: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,}$/
+                    },
+                    confirmpassword: {
+                        required: true,
+                        minlength: 5,
+                        equalTo: "#password" // Ensure passwords match
+                    },
+                    email: {
+                        required: true,
+                        email: true,
+                        // Add regex for more specific email validation if needed
+                        pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+                    }
+                },
+                messages: {
+                    name: {
+                        required: "Please enter a name",
+                        minlength: "Your username must consist of at least 2 characters"
+                    },
+                    password: {
+                        required: "Please enter a password",
+                        minlength: "Your password must consist of at least 5 characters",
+                        pattern: "Password must include at least one letter, one number, and one special character"
+                    },
+                    confirmpassword: {
+                        required: "Please confirm your password",
+                        minlength: "Your password must consist of at least 5 characters",
+                        equalTo: "Please enter the same password as above"
+                    },
+                    email: {
+                        required: "Please enter an email address",
+                        email: "Please enter a valid email address",
+                        pattern: "Please enter a valid email address"
+                    }
+                },
+                // Customize error placement and styling
+                errorPlacement: function(error, element) {
+                    error.addClass('error-message');
+                    error.insertAfter(element);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
