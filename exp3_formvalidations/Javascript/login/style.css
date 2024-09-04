@@ -95,6 +95,18 @@ body {
     transform: scale(1.02);
 }
 
+/* Error Message Styles */
+.error {
+    border-color: #e74c3c; /* Red border to indicate an error */
+}
+
+.error-message {
+    color: #e74c3c; /* Red color for error messages */
+    font-size: 0.8em;
+    margin-top: 4px;
+    display: block;
+}
+
 /* Animation for form */
 @keyframes fadeIn {
     from {
