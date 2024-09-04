@@ -53,6 +53,7 @@
 <body>
 
 <div class="calculator">
+    <h1>PHP Calulator </h1>
     <form id="calculatorForm" method="post">
         <input type="number" name="num1" placeholder="Enter first number" required>
         <select name="operation" required>
