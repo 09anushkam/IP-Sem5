@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 // Database connection details
 $servername = "localhost"; // Usually 'localhost' for phpMyAdmin
 $username = "root";        // Default MySQL username
-$password = "@nushka2509";            // MySQL password (leave empty for localhost by default)
+$password = "";            // MySQL password (leave empty for localhost by default)
 $dbname = "ContactForm";   // Replace with your database name
 
 // Create connection using MySQLi
